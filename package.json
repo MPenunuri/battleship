@@ -2,8 +2,9 @@
   "name": "battleship",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
+    "test": "jest",
     "build": "webpack",
     "watch": "webpack --watch",
     "server": "webpack serve --open",
@@ -42,6 +43,14 @@
     "webpack-dev-server": "^4.15.1"
   },
   "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     }
