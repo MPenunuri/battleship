@@ -9,8 +9,6 @@ test('Does ship get hit', () => {
 
 test('The ship sinks"', () => {
   const ship = Ship(3);
-  for (let i = 0; i < ship.length; i++) {
-    ship.hit();
-  }
+  for (let i = 0; i < ship.length; i++) ship.hit();
   expect(ship.isSunk()).toBe(true);
 });
