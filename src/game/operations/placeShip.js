@@ -24,6 +24,8 @@ export default function placeShip(gameboard, coordinates) {
   }
   const ship = setShip(axis.length);
   cells.forEach((cell) => {
-    gameboard[cell[0]][cell[1]].ship = ship;
+    const place = gameboard[cell[0]][cell[1]];
+    if ('ship' in place) return new Error('Ship in place');
+    else gameboard[cell[0]][cell[1]].ship = ship;
   });
 }
