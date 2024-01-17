@@ -1,6 +1,6 @@
-import receiveAttack from './receiveAttack.js';
-import setGameboard from './setGameboard.js';
-import placeShip from './placeShip.js';
+import receiveAttack from '../operations/receiveAttack.js';
+import setGameboard from '../factories/setGameboard.js';
+import placeShip from '../operations/placeShip.js';
 
 test('Does ship receive attack', () => {
   const gameboard = setGameboard();

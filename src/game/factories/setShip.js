@@ -1,4 +1,4 @@
-export default function newShip(length) {
+export default function setShip(length) {
   const ship = {
     length,
     hits: 0,

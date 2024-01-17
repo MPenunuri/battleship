@@ -1,5 +1,5 @@
-import placeShip from './placeShip.js';
-import setGameboard from './setGameboard.js';
+import placeShip from '../operations/placeShip.js';
+import setGameboard from '../factories/setGameboard.js';
 
 test('Gameboard allows to place ships', () => {
   const gameboard = setGameboard();

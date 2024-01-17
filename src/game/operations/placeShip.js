@@ -1,4 +1,4 @@
-import Ship from './ship.js';
+import setShip from '../factories/setShip.js';
 
 export default function placeShip(gameboard, coordinates) {
   const start = coordinates[0];
@@ -22,7 +22,7 @@ export default function placeShip(gameboard, coordinates) {
       cells.push([start[0] + i, start[1]]);
     }
   }
-  const ship = Ship(axis.length);
+  const ship = setShip(axis.length);
   cells.forEach((cell) => {
     gameboard[cell[0]][cell[1]].ship = ship;
   });
