@@ -1,21 +1,24 @@
-import createHtmlElement from '../../services/createHtmlElement.js';
+import setPanel from './setPanel.js';
+import setGameboards from './setGameboards.js';
+//import createHtmlElement from '../../services/createHtmlElement.js';
 
-export default function setGameContainer() {
-  document.querySelector('form').remove();
-  const gameContainer = document.getElementById('gameContainer');
+export default function setGameContainer(playerName) {
+  const form = document.querySelector('form');
+  form.classList.remove('show');
+  setTimeout(() => {
+    document.querySelector('form').remove();
+    const generalContainer = document.getElementById('generalContainer');
+    generalContainer.classList.add('gameContainer');
+    setPanel(playerName);
+    setGameboards();
+  }, 1000);
 
-  createHtmlElement(gameContainer, 'section', [], '', 'playerSection');
-  const playerSection = document.getElementById('playerSection');
-  createHtmlElement(playerSection, 'div', [], '', 'playerGamboard');
-  const playerGamboard = document.getElementById('playerGamboard');
-
-  createHtmlElement(gameContainer, 'section', [], '', 'machineSection');
-  const machineSection = document.getElementById('machineSection');
-  createHtmlElement(machineSection, 'div', [], '', 'machineGamboard');
-  const machineGamboard = document.getElementById('machineGamboard');
-
-  for (let i = 0; i < 100; i++) {
-    createHtmlElement(playerGamboard, 'div');
-    createHtmlElement(machineGamboard, 'div');
-  }
+  setTimeout(() => {
+    const panel = document.querySelector('.panel');
+    const playerGamboard = document.getElementById('playerGamboard');
+    const machineGamboard = document.getElementById('AIGamboard');
+    panel.classList.add('show');
+    playerGamboard.classList.add('show');
+    machineGamboard.classList.add('show');
+  }, 1500);
 }

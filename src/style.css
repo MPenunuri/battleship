@@ -103,24 +103,40 @@ input:focus {
     transition: all .5s; 
 }
 
-#gameContainer {
+.gameContainer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: row;
-	gap: 10vw;
+	flex-direction: column;
+	gap: 4vh;
 }
 
-section > div {
+.gameboardsContainer, .panel {
+	width: 80vw;
+	display: grid;
+	grid-template-columns: 37.5fr 0.15fr 37.5fr;
+	gap: 4vw;
+}
+
+div.gameboard, .panel {
+	opacity: 0;
+}
+
+div.gameboard.show, .panel.show {
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+}
+
+section.gameboard > div {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 }
 
-section > div > div {
+section.gameboard > div > div {
 	border: 1px solid #000;
     padding: 20px;
 }
 
-section > div > div:hover {
+section.gameboard > div > div:hover {
 	background-color: black;
 }

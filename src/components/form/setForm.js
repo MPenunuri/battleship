@@ -1,9 +1,11 @@
+// Throughout the entire project,
+// createHtmlElement is used to efficiently add DOM elements
 import createHtmlElement from '../../services/createHtmlElement.js';
 import startGame from '../gameContainer/startGame.js';
 
 export default function setForm() {
-  const gameContainer = document.getElementById('gameContainer');
-  createHtmlElement(gameContainer, 'form');
+  const generalContainer = document.getElementById('generalContainer');
+  createHtmlElement(generalContainer, 'form');
   const form = document.querySelector('form');
   createHtmlElement(form, 'label', [], 'Enter your name:', 'nameLabel', [
     { attribute: 'for', value: 'playerName' },
@@ -21,7 +23,7 @@ export default function setForm() {
   ]);
   const btn = document.querySelector('button');
   btn.addEventListener('click', () => {
-    startGame();
+    startGame(); // Once user enter their name, the game starts
   });
   setTimeout(() => {
     form.classList.add('show');
