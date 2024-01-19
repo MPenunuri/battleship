@@ -1,4 +1,4 @@
-import createHtmlElement from '../../services/createHtmlElement.js';
+import createHtmlElement from '../../../services/createHtmlElement.js';
 
 export default function setGameboards() {
   /* Gameboards are contained in a special container. */
@@ -13,7 +13,7 @@ export default function setGameboards() {
   createHtmlElement(playerSection, 'div', [gb], '', 'playerGamboard');
   const playerGamboard = document.getElementById('playerGamboard');
   /* Between gamboards there is a panel with game information*/
-  createHtmlElement(gameboardsContainer, 'section', ['.scorePanel']);
+  createHtmlElement(gameboardsContainer, 'section', [], '', 'gbPanel');
   //const gbPanel = document.querySelector('.gbPanel');
   // PENDIENTE ADICIONAR ELEMENTOS DEL PANEL
 
@@ -22,8 +22,8 @@ export default function setGameboards() {
   createHtmlElement(machineSection, 'div', [gb], '', 'AIGamboard');
   const machineGamboard = document.getElementById('AIGamboard');
 
-  for (let i = 0; i < 100; i++) {
-    createHtmlElement(playerGamboard, 'div');
-    createHtmlElement(machineGamboard, 'div');
+  for (let i = 1; i <= 100; i++) {
+    createHtmlElement(playerGamboard, 'div', ['pgbc'], '', `pgbc${i}`);
+    createHtmlElement(machineGamboard, 'div', ['mgbc'], '', `mgbc${i}`);
   }
 }

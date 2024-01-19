@@ -1,4 +1,4 @@
-export const array = [
+export default [
   [
     [2, 3],
     [3, 3],
