@@ -15,7 +15,7 @@ export default function setDragAndDrop() {
   cells.forEach((cell) => {
     cell.addEventListener('dragenter', dragEnter);
     cell.addEventListener('dragover', dragOver);
-    cell.addEventListener('dragleav', dragLeave);
+    cell.addEventListener('dragleave', dragLeave);
     cell.addEventListener('drop', drop);
   });
 }
