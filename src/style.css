@@ -127,19 +127,19 @@ div.gameboard.show, .panel.show, .pst.show {
 	transition: opacity 1.5s ease-in-out;
 }
 
-section.gameboard > div {
+section.gameboard > div.gameboard {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
-	position: relative;
 }
 
-section.gameboard > div > div {
+section.gameboard > div.gameboard > div {
 	width: 50px;
 	height: 50px;
 	border: 1px solid #000;
+	position: relative;
 }
 
-section.gameboard > div > div:hover {
+section.gameboard > div.gameboard > div:hover {
 	background-color: black;
 }
 
@@ -169,6 +169,7 @@ section.gameboard > div > div:hover {
 	border-radius: 50px;
 	cursor: grab;
 	position: absolute;
+	z-index: 1;
 }
 
 .pstShip:hover {
@@ -176,28 +177,28 @@ section.gameboard > div > div:hover {
     transition: all .5s;
 }
 
-.pst div:nth-child(1) > div {
-	height: 250px;
+#pShip1 {
+	height: 240px;
 }
 
-.pst div:nth-child(2) div:nth-child(1) {
+#pShip2 {
 	margin-bottom: 175px;
-	height: 200px;
+	height: 190px;
 }
 
-.pst div:nth-child(2) div:nth-child(2) {
+#pShip3 {
 	margin-top: 175px;
-	height: 100px;
+	height: 90px;
 }
 
-.pst div:nth-child(3) div:nth-child(1) {
+#pShip4 {
 	margin-top: 175px;
-	height: 150px;
+	height: 140px;
 }
 
-.pst div:nth-child(3) div:nth-child(2) {
+#pShip5 {
 	margin-bottom: 175px;
-	height: 150px;
+	height: 140px;
 }
 
 .drag-over {
@@ -208,9 +209,11 @@ section.gameboard > div > div:hover {
 	opacity: 0;
 }
 
-.ship {
-	background-color: red;
-	width: 50px;
-	height: 50px;
-	box-shadow: 6px 6px 6px black;
+.placedShip {
+	pointer-events: none;
+	margin: 0;
+}
+
+.unavailableCell {
+	background-color: rgb(227, 232, 236);
 }
