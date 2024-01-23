@@ -22,7 +22,7 @@ export default function setGameboards() {
   createHtmlElement(machineSection, 'div', [gb], '', 'AIGamboard');
   const machineGamboard = document.getElementById('AIGamboard');
 
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 0; i <= 99; i++) {
     createHtmlElement(playerGamboard, 'div', ['pgbc'], '', `pgbc${i}`);
     createHtmlElement(machineGamboard, 'div', ['mgbc'], '', `mgbc${i}`);
   }

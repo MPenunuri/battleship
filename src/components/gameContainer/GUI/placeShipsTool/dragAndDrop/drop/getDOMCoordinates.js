@@ -1,4 +1,4 @@
-export default function getCoordinates(e) {
+export default function getDOMCoordinates(e) {
   // Get dragStart coordinates to setup ship location
   let offsets = JSON.parse(e.dataTransfer.getData('application/json'));
   // Calculate drop coordinates relatives to dragStart location
