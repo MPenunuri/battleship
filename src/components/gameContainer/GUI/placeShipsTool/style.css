@@ -1,0 +1,157 @@
+#shipsContainer {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	height: 100px;
+	width: 100vw;
+	padding-bottom: 10px;
+}
+
+.pstRow{
+	height: 35px;
+	margin: 0;
+}
+
+.pstShip {
+	background-color: red;
+	box-shadow: 6px 6px 6px black;
+	border-radius: 50px;
+	cursor: grab;
+	position: absolute;
+	z-index: 1;
+}
+
+.pstShip.horizontal:hover {
+    transform: translate(-4px,-4px);
+    transition: all .5s;
+}
+
+#pShip6.horizontal {
+	height: 16px;
+	width: 168px;
+}
+
+#pShip5.horizontal {
+	height: 16px;
+	width: 140px;
+	margin-right: 80px;
+}
+
+#pShip2.horizontal {
+	height: 16px;
+	width: 56px;
+	margin-left: 160px;
+}
+
+#pShip4.horizontal {
+	height: 16px;
+	width: 112px;
+	margin-right: 100px;
+}
+
+#pShip3.horizontal {
+	height: 16px;
+	width: 84px;
+	margin-left: 140px;
+}
+
+.rotate {
+	transform: rotate(90deg);
+}
+
+.rotate:hover {
+    transform: translate(-4px,-4px) rotate(0deg);
+	z-index: 2;
+    transition: all .2s;
+}
+
+#pShip6.vertical {
+	width: 16px;
+	height: 168px;
+}
+
+#pShip5.vertical {
+	width: 16px;
+	height: 140px;
+	margin-right: 80px;
+}
+
+#pShip2.vertical {
+	width: 16px;
+	height: 56px;
+	margin-left: 160px;
+}
+
+#pShip4.vertical {
+	width: 16px;
+	height: 112px;
+	margin-right: 100px;
+}
+
+#pShip3.vertical {
+	width: 16px;
+	height: 84px;
+	margin-left: 140px;
+}
+
+.drag-over {
+    background-color: grey
+}
+
+.hide {
+	opacity: 0;
+}
+
+.placedShip {
+	pointer-events: none;
+	margin: 0;
+}
+
+.unavailableCell {
+	background-color: rgb(227, 232, 236);
+}
+
+#btnContainer {
+	display: flex;
+	height: 70px;
+}
+
+#btnContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+#directionBtn {
+	width: 200px;
+	height: 40px;
+	padding: 0;
+	font-size: min(4vw, 20px)
+}
+
+#directionBtn:hover {
+	cursor: pointer;
+    box-shadow: 2px 2px 10px black;
+    transform: translate(-4px,-4px);
+    transition: all .5s;
+}
+
+#directionBtn:active {
+	background-color: rgb(113, 166, 32);
+    transition: background-color .5s;
+}
+
+
+#directionBtn:focus {
+	cursor: pointer;
+    box-shadow: 6px 6px 10px black;
+	opacity: 1;
+    transform: translate(0px,0px);
+    transition: transform .5s;
+}
+
+#directionIcon{
+	width: 50px;
+}
+

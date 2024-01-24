@@ -32,6 +32,7 @@ body {
 	justify-content: center;
 	align-items:center;
 	text-align: center;
+	width: 100vw;
 }
 
 input, button {
@@ -67,153 +68,11 @@ button:focus {
 header {
 	margin-top: 10vh;
 	margin-bottom: 10vh;
-	font-size: 10vh
+	font-size: min(15vw, 80px);
 }
 
 footer {
 	position:fixed;
 	bottom: 2vh;
 	font-size: 2vh;
-}
-
-form {
-	gap: 1.5rem;
-	opacity: 0;
-	transition: opacity .5s ease-in-out;
-}
-
-form.show {
-	opacity: 1;
-}
-
-label, input {
-	font-size: 3vh;
-}
-
-input {
-	border-radius: 40px;
-	padding: 20px;
-	text-align: center;
-	border-color: black
-}
-
-input:focus {
-	box-shadow: 6px 6px 10px black;;
-    transform: translate(-4px,-4px);
-    transition: all .5s; 
-}
-
-.gameContainer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	gap: 4vh;
-}
-
-.gameboardsContainer, .panel {
-	width: 80vw;
-	display: grid;
-	grid-template-columns: 37.5fr 0.15fr 37.5fr;
-	gap: 4vw;
-}
-
-div.gameboard, .panel, .pst {
-	opacity: 0;
-}
-
-div.gameboard.show, .panel.show, .pst.show {
-	opacity: 1;
-	transition: opacity 1.5s ease-in-out;
-}
-
-section.gameboard > div.gameboard {
-	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-}
-
-section.gameboard > div.gameboard > div {
-	width: 50px;
-	height: 50px;
-	border: 1px solid #000;
-	position: relative;
-}
-
-section.gameboard > div.gameboard > div:hover {
-	background-color: black;
-}
-
-.gbPanel{
-	width: 200px;
-}
-
-.pst {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 50px;
-	margin-left: -25px;
-}
-
-.pstCol  {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	gap: 25px;
-}
-
-
-.pstShip {
-	background-color: red;
-	width: 30px;
-	height: 40px;
-	box-shadow: 6px 6px 6px black;
-	border-radius: 50px;
-	cursor: grab;
-	position: absolute;
-	z-index: 1;
-}
-
-.pstShip:hover {
-    transform: translate(-4px,-4px);
-    transition: all .5s;
-}
-
-#pShip6 {
-	height: 288px;
-}
-
-#pShip5 {
-	margin-bottom: 190px;
-	height: 240px;
-}
-
-#pShip2 {
-	margin-top: 190px;
-	height: 96px;
-}
-
-#pShip4 {
-	margin-top: 190px;
-	height: 192px;
-}
-
-#pShip3 {
-	margin-bottom: 190px;
-	height: 144px;
-}
-
-.drag-over {
-    background-color: grey
-}
-
-.hide {
-	opacity: 0;
-}
-
-.placedShip {
-	pointer-events: none;
-	margin: 0;
-}
-
-.unavailableCell {
-	background-color: rgb(227, 232, 236);
 }

@@ -1,0 +1,16 @@
+.placeShipsContainer {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap:0;
+}
+
+#pst, #playerSection {
+	opacity: 0;
+}
+
+#pst.show, #playerSection.show {
+	opacity: 1;
+	transition: opacity 1.5s ease-in-out;
+}

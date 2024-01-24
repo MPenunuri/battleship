@@ -5,7 +5,7 @@ import ships from '../../game/ships.js';
 export default function startGame() {
   // First of all, we store the playerName in a local variable
   const playerName = document.querySelector('input').value;
-  // We proceed by removing the form and adding gameboards to the DOM.
+  // We proceed by removing the form and adding player gameboard to the DOM.
   setGameContainer(playerName);
   const playerShips = ships;
   const machineShips = ships;

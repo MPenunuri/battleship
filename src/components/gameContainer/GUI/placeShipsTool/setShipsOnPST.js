@@ -1,22 +1,23 @@
 import createHtmlElement from '../../../../services/createHtmlElement.js';
 
 export default function setShipsOnPST() {
-  const cols = document.querySelectorAll('.pstCol');
+  const rows = document.querySelectorAll('.pstRow');
   // The ships' length was set up in the CSS file
   // See .pst div:nth-child(n) div:nth-child(n) expressions
-  createHtmlElement(cols[0], 'div', ['pstShip'], '', 'pShip6', [
+  const classes = ['pstShip', 'vertical', 'rotate'];
+  createHtmlElement(rows[0], 'div', classes, '', 'pShip6', [
     { attribute: 'draggable', value: 'true' },
   ]); // Ship with 6 cells length
-  createHtmlElement(cols[1], 'div', ['pstShip'], '', 'pShip5', [
+  createHtmlElement(rows[1], 'div', classes, '', 'pShip5', [
     { attribute: 'draggable', value: 'true' },
   ]); // Ship with 5 cells length
-  createHtmlElement(cols[1], 'div', ['pstShip'], '', 'pShip2', [
+  createHtmlElement(rows[1], 'div', classes, '', 'pShip2', [
     { attribute: 'draggable', value: 'true' },
   ]); // Ship with 2 cells length
-  createHtmlElement(cols[2], 'div', ['pstShip'], '', 'pShip4', [
+  createHtmlElement(rows[2], 'div', classes, '', 'pShip4', [
     { attribute: 'draggable', value: 'true' },
   ]); // Ship with 4 cells length
-  createHtmlElement(cols[2], 'div', ['pstShip'], '', 'pShip3', [
+  createHtmlElement(rows[2], 'div', classes, '', 'pShip3', [
     { attribute: 'draggable', value: 'true' },
   ]); // Ship with 3 cells length
 }

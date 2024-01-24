@@ -8,7 +8,13 @@ export default function getElementsOnShipArea(
   shipLength
 ) {
   const clone = draggable.cloneNode(false);
-  clone.style.height = shipLength * 48 + 'px';
+  if (clone.classList.contains('vertical')) {
+    clone.style.height = shipLength * 28 + 'px';
+    clone.style.width = 16 + 'px';
+  } else if (clone.classList.contains('horizontal')) {
+    clone.style.height = 16 + 'px';
+    clone.style.width = shipLength * 28 + 'px';
+  }
   clone.style.left = newX + 'px';
   clone.style.top = newY + 'px';
   clone.style.margin = 0;

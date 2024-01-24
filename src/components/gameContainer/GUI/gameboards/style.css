@@ -1,0 +1,15 @@
+#playerGameboard {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+}
+
+.pgbc {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #000;
+	position: relative;
+}
+
+.pgbc:hover {
+	background-color: black;
+}

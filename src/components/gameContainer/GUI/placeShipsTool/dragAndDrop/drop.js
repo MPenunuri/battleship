@@ -4,7 +4,8 @@ import getElementsOnShipArea from './drop/getElementsOnShipArea.js';
 import linkShipWithCell from './drop/linkShipWithCell.js';
 import getGameCoordinates from './drop/getGameCoordinates.js';
 
-import shipsCoordinates from '../shipsCoordinates.js';
+//import shipsCoordinates from '../shipsCoordinates.js';
+// MUY BIEN la herramienta funciona ¿ahora qué?
 
 export default function drop(e) {
   e.target.classList.remove('drag-over');
@@ -25,6 +26,9 @@ export default function drop(e) {
   // Verify if dragAndDrop is a valid movement
   if (elementsOnShipArea.length !== shipLength) {
     e.preventDefault();
+    if (e.target.classList.contains('vertical')) {
+      e.target.classList.add('rotate');
+    }
   } else {
     // Setup placed ship style propierties (draggable = ship)
     setupShipStyle(draggable, container, newX, newY);
@@ -34,6 +38,5 @@ export default function drop(e) {
     );
     // Get game coordinates for internal app purposes
     getGameCoordinates(draggableId);
-    console.log(shipsCoordinates);
   }
 }

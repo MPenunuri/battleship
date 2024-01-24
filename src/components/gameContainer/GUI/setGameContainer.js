@@ -1,6 +1,6 @@
-import setPanel from './setPanel.js';
-import setGameboards from './setGameboards.js';
+import setPlayerGameboard from './gameboards/setPlayerGameboard.js';
 import setPlaceShipsTool from './setPlaceShipsTool.js';
+import style from './style.css'; // eslint-disable-line no-unused-vars
 
 export default function setGameContainer(playerName) {
   const form = document.querySelector('form');
@@ -8,20 +8,15 @@ export default function setGameContainer(playerName) {
   setTimeout(() => {
     document.querySelector('form').remove();
     const generalContainer = document.getElementById('generalContainer');
-    generalContainer.classList.add('gameContainer');
-    setPanel(playerName);
-    setGameboards();
+    generalContainer.classList.add('placeShipsContainer');
     setPlaceShipsTool();
+    setPlayerGameboard(playerName);
   }, 500);
 
   setTimeout(() => {
-    const panel = document.querySelector('.panel');
-    const playerGamboard = document.getElementById('playerGamboard');
-    const machineGamboard = document.getElementById('AIGamboard');
-    const pst = document.querySelector('.pst');
-    panel.classList.add('show');
-    playerGamboard.classList.add('show');
-    machineGamboard.classList.add('show');
+    const playerSection = document.getElementById('playerSection');
+    const pst = document.getElementById('pst'); // pst stands for place ships tool
+    playerSection.classList.add('show');
     pst.classList.add('show');
   }, 750);
 }

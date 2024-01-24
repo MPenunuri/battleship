@@ -2,6 +2,7 @@
 // createHtmlElement is used to efficiently add DOM elements
 import createHtmlElement from '../../services/createHtmlElement.js';
 import startGame from '../gameContainer/startGame.js';
+import style from './style.css'; // eslint-disable-line no-unused-vars
 
 export default function setForm() {
   const generalContainer = document.getElementById('generalContainer');

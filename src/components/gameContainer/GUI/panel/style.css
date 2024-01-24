@@ -1,0 +1,12 @@
+.panel {
+	width: 80vw;
+	display: grid;
+	grid-template-columns: 37.5fr 0.15fr 37.5fr;
+	gap: 4vw;
+    opacity: 0;
+}
+
+.panel.show {
+	opacity: 1;
+	transition: opacity 1.5s ease-in-out;
+}
