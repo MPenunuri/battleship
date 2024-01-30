@@ -1,32 +1,39 @@
+import play from '../../../game/play.js';
 import createHtmlElement from '../../../services/createHtmlElement.js';
-import setShipsOnPST from './placeShipsTool/setShipsOnPST.js';
-import setDragAndDrop from './placeShipsTool/setDragAndDrop.js';
 import style from './placeShipsTool/style.css'; // eslint-disable-line no-unused-vars
-import arrow from '../../../../assets/arrow.svg';
-import changeDirection from './placeShipsTool/changeDirection.js';
+import shuffle from '../../../../assets/shuffle-outline.svg';
+import hand from '../../../../assets/hand-right-outline.svg';
+import setRandomly from './placeShipsTool/setRandomly.js';
+import setManually from './placeShipsTool/setManually.js';
 
 export default function setPlaceShipsTool() {
   const generalContainer = document.getElementById('generalContainer');
-  createHtmlElement(generalContainer, 'div', [], '', 'pst'); // pst stands for place ships tool
+  // Create pst container
+  // pst stands for place-ships tool
+  createHtmlElement(generalContainer, 'div', [], '', 'pst');
   const pst = document.getElementById('pst');
-  createHtmlElement(pst, 'div', [], '', 'btnContainer');
-  const btnDiv = document.getElementById('btnContainer');
-  createHtmlElement(btnDiv, 'button', [], 'Change direction', 'directionBtn', [
-    { attribute: 'type', value: 'button' },
+  // Create user advice
+  const playerName = play.current.game.player1.name;
+  const legend = `Hi ${playerName}! Please select how you want to place your navy:`;
+  createHtmlElement(pst, 'p', [], legend, 'legend');
+  // Create set randomly button
+  createHtmlElement(pst, 'button', [], 'Set randomly', 'randomlyBtn');
+  const randomlyBtn = document.getElementById('randomlyBtn');
+  createHtmlElement(randomlyBtn, 'img', [], '', 'randomIcon', [
+    { attribute: 'src', value: shuffle },
+    { attribute: 'alt', value: 'random icon' },
   ]);
-  createHtmlElement(btnDiv, 'img', [], '', 'directionIcon', [
-    { attribute: 'src', value: arrow },
-    { attribute: 'alt', value: 'directionIcon' },
-  ]);
-  createHtmlElement(pst, 'div', [], '', 'shipsContainer');
-  const shipsContainer = document.getElementById('shipsContainer');
-  for (let i = 0; i < 3; i++) {
-    createHtmlElement(shipsContainer, 'div', ['pstRow']);
-  }
-  setShipsOnPST();
-  const btn = document.getElementById('directionBtn');
-  btn.addEventListener('click', () => {
-    changeDirection();
+  randomlyBtn.addEventListener('click', () => {
+    setRandomly();
   });
-  setDragAndDrop();
+  // Create set manually button
+  createHtmlElement(pst, 'button', [], 'Set manually', 'manuallyBtn');
+  const manuallyBtn = document.getElementById('manuallyBtn');
+  createHtmlElement(manuallyBtn, 'img', [], '', 'randomIcon', [
+    { attribute: 'src', value: hand },
+    { attribute: 'alt', value: 'hand icon' },
+  ]);
+  manuallyBtn.addEventListener('click', () => {
+    setManually();
+  });
 }

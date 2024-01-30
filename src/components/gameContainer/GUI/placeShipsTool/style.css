@@ -1,3 +1,7 @@
+#pst > #legend {
+	width: 280px;
+}
+
 #shipsContainer {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -61,7 +65,7 @@
 .rotate:hover {
     transform: translate(-4px,-4px) rotate(0deg);
 	z-index: 2;
-    transition: all .2s;
+    transition: all .5s;
 }
 
 #pShip6.vertical {
@@ -112,46 +116,49 @@
 
 #btnContainer {
 	display: flex;
-	height: 70px;
-}
-
-#btnContainer {
-	display: flex;
-	flex-direction: row;
+	flex-direction: column-reverse;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
 }
 
-#directionBtn {
-	width: 200px;
-	height: 40px;
-	padding: 0;
-	font-size: min(4vw, 20px)
+#pst > button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 280px;
+	height: 45px;
+	font-size: 15px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
-#directionBtn:hover {
+#pst > button:hover {
 	cursor: pointer;
     box-shadow: 2px 2px 10px black;
     transform: translate(-4px,-4px);
     transition: all .5s;
 }
 
-#directionBtn:active {
+#pst > button:active {
 	background-color: rgb(113, 166, 32);
     transition: background-color .5s;
 }
 
-
-#directionBtn:focus {
+#pst > button:focus {
 	cursor: pointer;
     box-shadow: 6px 6px 10px black;
 	opacity: 1;
     transform: translate(0px,0px);
-    transition: transform .5s;
+    transition: all .5s;
 }
 
-#directionIcon{
-	width: 50px;
+img{
+	width: 30px;
+	color: white;
+	filter: invert(100%);
+	border-radius: 40px;
+	border: 2px solid black;
 }
 

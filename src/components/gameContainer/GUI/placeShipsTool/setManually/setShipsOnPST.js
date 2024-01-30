@@ -1,4 +1,4 @@
-import createHtmlElement from '../../../../services/createHtmlElement.js';
+import createHtmlElement from '../../../../../services/createHtmlElement.js';
 
 export default function setShipsOnPST() {
   const rows = document.querySelectorAll('.pstRow');

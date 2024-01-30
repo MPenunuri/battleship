@@ -3,7 +3,12 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	gap:0;
+	gap: 10px;
+}
+
+#pst {
+	gap: 10px;
+	height: 200px;
 }
 
 #pst, #playerSection {

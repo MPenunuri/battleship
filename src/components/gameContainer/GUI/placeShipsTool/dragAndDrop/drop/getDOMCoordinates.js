@@ -7,7 +7,7 @@ export default function getDOMCoordinates(e) {
   // Calculate drop coordinates relatives to e.tarjet (gameboard cell)
   const container = document.getElementById(e.target.id);
   const containerRect = container.getBoundingClientRect();
-  newX = newX - containerRect.left;
-  newY = newY - containerRect.top;
+  newX = newX - containerRect.left - 7;
+  newY = newY - containerRect.top - 7;
   return { container, newX, newY };
 }

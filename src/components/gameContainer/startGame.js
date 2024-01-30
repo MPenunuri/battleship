@@ -1,14 +1,14 @@
 import setGameContainer from './GUI/setGameContainer.js';
 import setGame from '../../game/setGame.js';
-import ships from '../../game/ships.js';
+import play from '../../game/play.js';
 
 export default function startGame() {
-  // First of all, we store the playerName in a local variable
+  // Start game and set up players name
   const playerName = document.querySelector('input').value;
+  play.current = setGame();
+  play.current.setPlayerName(1, playerName);
+  play.current.setPlayerName(2, 'Machine');
   // We proceed by removing the form and adding player gameboard to the DOM.
-  setGameContainer(playerName);
-  const playerShips = ships;
-  const machineShips = ships;
-  const game = setGame(playerName, 'Machine', playerShips, machineShips);
-  console.log(game);
+  setGameContainer();
+  console.log(play);
 }

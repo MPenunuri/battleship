@@ -2,7 +2,7 @@ import setPlayerGameboard from './gameboards/setPlayerGameboard.js';
 import setPlaceShipsTool from './setPlaceShipsTool.js';
 import style from './style.css'; // eslint-disable-line no-unused-vars
 
-export default function setGameContainer(playerName) {
+export default function setGameContainer() {
   const form = document.querySelector('form');
   form.classList.remove('show');
   setTimeout(() => {
@@ -10,7 +10,7 @@ export default function setGameContainer(playerName) {
     const generalContainer = document.getElementById('generalContainer');
     generalContainer.classList.add('placeShipsContainer');
     setPlaceShipsTool();
-    setPlayerGameboard(playerName);
+    setPlayerGameboard();
   }, 500);
 
   setTimeout(() => {

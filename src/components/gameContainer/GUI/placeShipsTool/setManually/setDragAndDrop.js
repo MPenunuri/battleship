@@ -1,9 +1,9 @@
-import dragStart from './dragAndDrop/dragStart.js';
-import dragOver from './dragAndDrop/dragOver.js';
-import dragLeave from './dragAndDrop/dragLeave.js';
-import dragEnd from './dragAndDrop/dragEnd.js';
-import dragEnter from './dragAndDrop/dragEnter.js';
-import drop from './dragAndDrop/drop.js';
+import dragStart from '../dragAndDrop/dragStart.js';
+import dragOver from '../dragAndDrop/dragOver.js';
+import dragLeave from '../dragAndDrop/dragLeave.js';
+import dragEnd from '../dragAndDrop/dragEnd.js';
+import dragEnter from '../dragAndDrop/dragEnter.js';
+import drop from '../dragAndDrop/drop.js';
 
 export default function setDragAndDrop() {
   setTimeout(() => {
