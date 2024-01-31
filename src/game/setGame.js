@@ -6,22 +6,26 @@ import setShipsOnRandomCoordinates from './operations/setShipsOnRandomCoordinate
 
 export default function setGame() {
   const game = setPlayers();
+  const getGameboard = (playerId) => {
+    return game[`player${playerId}`].gameboard;
+  };
   const setPlayerName = (id, name) => {
     game[`player${id}`].name = name;
   };
   const setPlayerShips = (playerId, ships) => {
-    const gameboard = game[`player${playerId}`].gameboard;
+    const gameboard = getGameboard(playerId);
     ships.forEach((ship) => {
       placeShip(gameboard, ship);
     });
   };
   const setPlayerShipsRandomly = (playerId) => {
-    const gameboard = game[`player${playerId}`].gameboard;
+    const gameboard = getGameboard(playerId);
     const randomCoordinates = setShipsOnRandomCoordinates(gameboard);
     return randomCoordinates;
   };
   return {
     game,
+    getGameboard,
     setPlayerName,
     setPlayerShips,
     setPlayerShipsRandomly,
