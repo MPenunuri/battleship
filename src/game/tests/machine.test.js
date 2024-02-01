@@ -27,6 +27,5 @@ test('Does the machine properly attack in the vertical direction', () => {
   receiveAttack(playerGameboard, [4, 3]);
   const machine = setMachine(playerGameboard);
   for (let i = 0; i <= 6; i++) machine.attack();
-  console.log(playerGameboard[2][2].ship);
   expect(playerGameboard[2][3].ship.isSunk()).toBe(true);
 });
