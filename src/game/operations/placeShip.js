@@ -9,16 +9,16 @@ export default function placeShip(gameboard, coordinates) {
       return start[0] === end[0] ? true : false;
     })();
     const length = (() => {
-      return x === true ? end[1] - start[1] : end[0] - start[0];
+      return x === true ? end[1] - start[1] + 1 : end[0] - start[0] + 1;
     })();
     return { x, length };
   })();
   if (axis.x === true) {
-    for (let i = 0; i <= axis.length; i++) {
+    for (let i = 0; i < axis.length; i++) {
       cells.push([start[0], start[1] + i]);
     }
   } else {
-    for (let i = 0; i <= axis.length; i++) {
+    for (let i = 0; i < axis.length; i++) {
       cells.push([start[0] + i, start[1]]);
     }
   }

@@ -6,6 +6,12 @@
     position: absolute;
     z-index: 1;
     pointer-events: none;
+    opacity: 0;
+}
+
+.randomlyPlacedShip.show {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 #l6ship.vertical {

@@ -1,15 +1,26 @@
-#playerGameboard {
+#playerGameboard, #AIGameboard {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 }
 
-.pgbc {
+.pgbc, .mgbc {
 	width: 30px;
 	height: 30px;
 	border: 1px solid #000;
 	position: relative;
 }
 
-.pgbc:hover {
+.pgbc:hover, .mgbc:hover {
 	background-color: black;
+}
+
+.attacked {
+	background-color: brown;
+	transition: background-color 1s ease;
+}
+
+.missed {
+	pointer-events: none;
+	background-color: rgb(50, 48, 48);
+	transition: background-color 1s ease;
 }

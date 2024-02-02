@@ -1,7 +1,7 @@
 // Throughout the entire project,
 // createHtmlElement is used to efficiently add DOM elements
 import createHtmlElement from '../../services/createHtmlElement.js';
-import startGame from '../gameContainer/startGame.js';
+import setup from '../gameContainer/setup.js';
 import style from './style.css'; // eslint-disable-line no-unused-vars
 
 export default function setForm() {
@@ -24,7 +24,7 @@ export default function setForm() {
   ]);
   const btn = document.querySelector('button');
   btn.addEventListener('click', () => {
-    startGame(); // Once user enter their name, the game starts
+    setup(); // Once user enter their name, the game starts
   });
   setTimeout(() => {
     form.classList.add('show');

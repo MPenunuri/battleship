@@ -1,6 +1,6 @@
 import createHtmlElement from '../../../../services/createHtmlElement.js';
-import setPanel from '../setPanel.js';
 import checkmark from '../../../../../assets/checkmark-circle-outline.svg';
+import start from '../../start.js';
 
 export default function setConfirmationBtn(confirmationFn) {
   const pst = document.getElementById('pst');
@@ -17,8 +17,11 @@ export default function setConfirmationBtn(confirmationFn) {
   ]);
   confirmationBtn.addEventListener('click', () => {
     confirmationFn();
-    pst.classList.remove('show');
-    setTimeout(() => pst.remove(), 1000);
-    setPanel();
+    const generalContainer = document.getElementById('generalContainer');
+    generalContainer.classList.add('hide');
+    setTimeout(() => {
+      pst.remove();
+      start();
+    }, 1000);
   });
 }

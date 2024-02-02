@@ -1,3 +1,4 @@
+import identifyDirection from './machine/identifyDirection.js';
 import getAttackCoordinates from './machine/getAttackCoordinates.js';
 import attackRandomly from './machine/attackRandomly.js';
 import receiveAttack from './operations/receiveAttack.js';
@@ -10,7 +11,8 @@ export default function machine(gameboard) {
         const place = playerGameboard[i][j];
         if (place.attacked) {
           if ('ship' in place && !place.ship.isSunk()) {
-            return getAttackCoordinates(playerGameboard, i, j);
+            const direction = identifyDirection(playerGameboard, i, j);
+            return getAttackCoordinates(playerGameboard, i, j, direction);
           }
         }
       }
@@ -19,11 +21,12 @@ export default function machine(gameboard) {
   };
   const attack = () => {
     const target = activeTarget();
-    //console.log(target);
     if (target.length === 0) {
-      attackRandomly(playerGameboard);
+      return attackRandomly(playerGameboard);
     } else {
       receiveAttack(playerGameboard, target);
+      console.log(target);
+      return target;
     }
   };
   return { attack };

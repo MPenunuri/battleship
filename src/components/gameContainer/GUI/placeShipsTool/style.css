@@ -112,6 +112,7 @@
 
 .unavailableCell {
 	background-color: rgb(227, 232, 236);
+	pointer-events: none;
 }
 
 #btnContainer {

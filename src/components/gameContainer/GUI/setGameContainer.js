@@ -7,8 +7,6 @@ export default function setGameContainer() {
   form.classList.remove('show');
   setTimeout(() => {
     document.querySelector('form').remove();
-    const generalContainer = document.getElementById('generalContainer');
-    generalContainer.classList.add('placeShipsContainer');
     setPlaceShipsTool();
     setPlayerGameboard();
   }, 500);

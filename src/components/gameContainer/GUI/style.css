@@ -1,21 +1,35 @@
-.placeShipsContainer {
+#generalContainer {
     display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	gap: 10px;
+	opacity: 1;
+	transition: 1s ease-in-out;
 }
 
-#pst {
+#generalContainer.hide {
+	opacity: 0;
+	transition: 1s ease-in-out;
+}
+
+#pst, #panel {
 	gap: 10px;
 	height: 200px;
 }
 
-#pst, #playerSection {
+#pst, #playerSection, #AIGameboard, #panel {
 	opacity: 0;
 	transition: opacity .5s ease-in-out;
 }
 
-#pst.show, #playerSection.show {
+#pst.show, #playerSection.show, #AIGameboard.show, #panel.show {
 	opacity: 1;
+}
+
+#panel > p:nth-child(2) {
+	font-size: 45px;
+	font-weight: 900;
+	color: brown;
+	text-decoration: underline;
 }

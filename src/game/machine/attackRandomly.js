@@ -19,4 +19,5 @@ export default function attackRandomly(playerGameboard) {
     }
   }
   receiveAttack(playerGameboard, coordinates);
+  return coordinates;
 }

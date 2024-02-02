@@ -19,9 +19,12 @@ export default function setGame() {
       placeShip(gameboard, ship);
     });
   };
+  const restoreGameboard = (playerId) => {
+    return (game[`player${playerId}`].gameboard = setGameboard());
+  };
   const setPlayerShipsRandomly = (playerId) => {
+    restoreGameboard(playerId);
     let gameboard = getGameboard(playerId);
-    gameboard = setGameboard();
     const randomCoordinates = setShipsOnRandomCoordinates(gameboard);
     return randomCoordinates;
   };

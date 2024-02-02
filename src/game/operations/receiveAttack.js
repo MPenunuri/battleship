@@ -6,5 +6,6 @@ export default function receiveAttack(gameboard, coordinates) {
   place.attacked = true;
   if ('ship' in place) {
     place.ship.hit();
-  }
+    return true;
+  } else return false;
 }

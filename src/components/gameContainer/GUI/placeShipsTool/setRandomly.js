@@ -25,12 +25,18 @@ export default function setRandomly() {
     );
     const shipClasses = [direction, 'randomlyPlacedShip'];
     createHtmlElement(firstCell, 'div', shipClasses, '', `l${shipLength}ship`);
-    for (let i = 0; i < shipLength; i++) {
-      const row = shipCoordinates[i][0];
-      const col = shipCoordinates[i][1];
-      const id = getId(row, col);
-      const cell = document.getElementById(id);
-      cell.classList.add('unavailableCell');
-    }
+    setTimeout(() => {
+      for (let i = 0; i < shipLength; i++) {
+        const row = shipCoordinates[i][0];
+        const col = shipCoordinates[i][1];
+        const id = getId(row, col);
+        const cell = document.getElementById(id);
+        cell.classList.add('unavailableCell');
+      }
+      const ships = document.querySelectorAll('.randomlyPlacedShip');
+      ships.forEach((ship) => {
+        ship.classList.add('show');
+      });
+    }, 500);
   });
 }
