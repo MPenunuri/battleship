@@ -1,20 +1,31 @@
 import play from '../../../../game/play.js';
+import setFinalButtons from './setFinalButtons.js';
+import confirmation from './setRandomly/confirmation.js';
 import getId from './setRandomly/getId.js';
+import createHtmlElement from '../../../../services/createHtmlElement.js';
+import style from './setRandomly/style.css'; // eslint-disable-line no-unused-vars
 
 export default function setRandomly() {
-  // pst stands for place-ships tool
-  const pst = document.getElementById('pst');
-  // Delete html elements from previous step
-  pst.classList.remove('show');
-  while (pst.firstChild) {
-    pst.removeChild(pst.firstChild);
-  }
+  // Add confirmation and try again buttons
+  const legend = confirmation.legend;
+  setFinalButtons(legend, confirmation.fn, setRandomly);
   // Get ships coordinates
   const setPlayerShipsRandomly = play.current.setPlayerShipsRandomly;
   const shipsCoordinates = setPlayerShipsRandomly(1);
   // Apply style to corresponding DOM cells
   shipsCoordinates.forEach((shipCoordinates) => {
-    for (let i = 0; i < shipCoordinates.length; i++) {
+    const shipLength = shipCoordinates.length;
+    const direction = (() => {
+      return shipCoordinates[0][0] === shipCoordinates[1][0]
+        ? 'horizontal'
+        : 'vertical';
+    })();
+    const firstCell = document.getElementById(
+      getId(shipCoordinates[0][0], shipCoordinates[0][1])
+    );
+    const shipClasses = [direction, 'randomlyPlacedShip'];
+    createHtmlElement(firstCell, 'div', shipClasses, '', `l${shipLength}ship`);
+    for (let i = 0; i < shipLength; i++) {
       const row = shipCoordinates[i][0];
       const col = shipCoordinates[i][1];
       const id = getId(row, col);
@@ -22,8 +33,4 @@ export default function setRandomly() {
       cell.classList.add('unavailableCell');
     }
   });
-  // Display gameboard
-  setTimeout(() => {
-    pst.classList.add('show');
-  }, 500);
 }

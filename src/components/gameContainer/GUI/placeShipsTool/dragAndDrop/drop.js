@@ -3,9 +3,9 @@ import setupShipStyle from './drop/setupShipStyle.js';
 import getElementsOnShipArea from './drop/getElementsOnShipArea.js';
 import linkShipWithCell from './drop/linkShipWithCell.js';
 import getGameCoordinates from './drop/getGameCoordinates.js';
-
-//import shipsCoordinates from '../shipsCoordinates.js';
-// MUY BIEN la herramienta funciona ¿ahora qué?
+import setFinalButtons from '../setFinalButtons.js';
+import confirmation from '../setManually/confirmation.js';
+import tryAgainFn from '../setManually.js';
 
 export default function drop(e) {
   e.target.classList.remove('drag-over');
@@ -38,5 +38,12 @@ export default function drop(e) {
     );
     // Get game coordinates for internal app purposes
     getGameCoordinates(draggableId);
+    // Check if PST container has available ships
+    // If not, proceed by asking the user for placement confirmation
+    const ships = document.querySelectorAll('.pstRow > div');
+    if (ships.length === 0) {
+      // Add confirmation and trya again buttons
+      setFinalButtons(confirmation.legend(), confirmation.fn, tryAgainFn);
+    }
   }
 }

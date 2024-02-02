@@ -27,5 +27,7 @@ export default function getCoordinates(direction, startCellNum, shipLength) {
       }
     }
   }
-  return coordinates;
+  return coordinates.sort((a, b) => {
+    return a[0] === b[0] ? a[1] - b[1] : a[0] - b[0];
+  });
 }

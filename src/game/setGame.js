@@ -2,6 +2,7 @@ import setPlayers from './factories/setPlayers.js';
 import placeShip from './operations/placeShip.js';
 import receiveAttack from './operations/receiveAttack.js';
 import allShipsSunk from './operations/allShipsSunk.js';
+import setGameboard from './factories/setGameboard.js';
 import setShipsOnRandomCoordinates from './operations/setShipsOnRandomCoordinates.js';
 
 export default function setGame() {
@@ -19,7 +20,8 @@ export default function setGame() {
     });
   };
   const setPlayerShipsRandomly = (playerId) => {
-    const gameboard = getGameboard(playerId);
+    let gameboard = getGameboard(playerId);
+    gameboard = setGameboard();
     const randomCoordinates = setShipsOnRandomCoordinates(gameboard);
     return randomCoordinates;
   };

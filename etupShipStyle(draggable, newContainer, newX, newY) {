@@ -1,0 +1,107 @@
+[33mcommit f373770aed5b0acd0d4c02392dfbbe2ee1a35d9a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Thu Feb 1 12:24:36 2024 -0600
+
+    Fix placeShip issue
+
+[33mcommit 3789fc62254bd874b59c0c3f8db4d0e128346da2[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Wed Jan 31 12:47:03 2024 -0600
+
+    Setup AI player and tests
+
+[33mcommit ee48ee8ec7e90d92f36834fde4584106dc0581df[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Tue Jan 30 15:59:12 2024 -0600
+
+    Add random placement tool
+
+[33mcommit 385492fc378e2fb09a7f7380fb0f77319da82075[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Wed Jan 24 10:08:25 2024 -0600
+
+    Finish PST and improve css file management
+
+[33mcommit d6acca32d4b9618d1a4e9a9ee5cce94b08fd0978[m[33m ([m[1;31morigin/placementValidation[m[33m)[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Tue Jan 23 07:50:34 2024 -0600
+
+    Setup placement validation and get game coordinates tool
+
+[33mcommit 6626711d6e48f1156d9613032884c64dd72d0330[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Mon Jan 22 13:28:35 2024 -0600
+
+    Fix position issues about ship placement
+
+[33mcommit 9be2c90c4c06b2f80ff491e9c12479625d442d2a[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Fri Jan 19 12:59:21 2024 -0600
+
+    Setup more advances on place ships tool
+
+[33mcommit db318ec916bdff28fd33c3da40840baf49c1dcfc[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Fri Jan 19 09:05:28 2024 -0600
+
+    Setup advances on placeships tool
+
+[33mcommit 45db8fc606afdaf93a489df4c14c8e9f70f63041[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Thu Jan 18 12:39:20 2024 -0600
+
+    Improve GUI elements
+
+[33mcommit 982687bc8590eadbed6eb80de109e036dae62fef[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Wed Jan 17 17:35:55 2024 -0600
+
+    Setup elementary HTML elements and styles
+
+[33mcommit 907a00692b3cdecdfc4d5c794090c5848a658a8e[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Wed Jan 17 11:21:22 2024 -0600
+
+    Add setGame function and improve file organization
+
+[33mcommit 1c17da2d50daa19f9f4ebf11b8bfc10625089ac1[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Tue Jan 16 17:12:26 2024 -0600
+
+    Add gameboard features and related functions
+
+[33mcommit 1585db805174442ab5df29f60178b2a89fe79172[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Mon Jan 15 17:52:35 2024 -0600
+
+    Add Ship factory function and tests
+
+[33mcommit 3812b9cc42cd5b6f111974a7df55105e543ea2ff[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Fri Jan 12 20:34:22 2024 -0600
+
+    Fix Jest configuration
+
+[33mcommit f7a59dc6a839069a63b6d4c63ceed50385353b0b[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Fri Jan 12 19:56:16 2024 -0600
+
+    Setup jest
+
+[33mcommit 2a9d8ddded2e81fdf8842328cc1cac26885a1b4a[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Fri Jan 12 19:24:07 2024 -0600
+
+    Setup Webpack
+
+[33mcommit cd463a4c82dd0415b0f8a54d5c3046a37ea07948[m
+Author: MPenunuri <manuel.penunuri.ram@gmail.com>
+Date:   Fri Jan 12 17:53:37 2024 -0600
+
+    Setup linter and formatter
+
+[33mcommit 24ad28f1eb500ce31277b7079619251002a4b96b[m
+Author: Manuel Peñuñuri <107559184+MPenunuri@users.noreply.github.com>
+Date:   Fri Jan 12 17:23:19 2024 -0600
+
+    Initial commit

@@ -1,10 +1,8 @@
 import createHtmlElement from '../../../services/createHtmlElement.js';
 
-export default function setPanel(playerName) {
-  const gameContainer = document.querySelector('.gameContainer');
-  createHtmlElement(gameContainer, 'section', ['panel']);
-  const panel = document.querySelector('.panel');
-  createHtmlElement(panel, 'div', ['playerPanel'], playerName);
-  createHtmlElement(panel, 'div', ['modularPanel'], 'VS.');
-  createHtmlElement(panel, 'div', ['AIPanel'], 'Machine');
+export default function setPanel() {
+  const generalContainer = document.getElementById('generalContainer');
+  createHtmlElement(generalContainer, 'section', [], '', 'panel');
+  const panel = document.getElementById('panel');
+  createHtmlElement(panel, 'p', [], 'Panel');
 }

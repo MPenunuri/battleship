@@ -1,0 +1,69 @@
+.randomlyPlacedShip {
+    background-color: red;
+    box-shadow: 6px 6px 6px black;
+    border-radius: 50px;
+    cursor: grab;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#l6ship.vertical {
+    height: 168px;
+    width: 16px;
+    top: 10px;
+}
+
+#l6ship.horizontal {
+    height: 16px;
+    width: 168px;
+    left: 10px;
+}
+
+#l5ship.vertical {
+    height: 140px;
+    width: 16px;
+    top: 10px;
+}
+
+#l5ship.horizontal {
+    height: 16px;
+    width: 140px;
+    left: 10px;
+}
+
+#l4ship.vertical {
+    height: 112px;
+    width: 16px;
+    top: 10px;
+}
+
+#l4ship.horizontal {
+    height: 16px;
+    width: 112px;
+    left: 10px;
+}
+
+#l3ship.vertical {
+    height: 84px;
+    width: 16px;
+    top: 5px;
+}
+
+#l3ship.horizontal {
+    height: 16px;
+    width: 84px;
+    left: 5px;
+}
+
+#l2ship.vertical {
+    height: 56px;
+    width: 16px;
+    top: 5px;
+}
+
+#l2ship.horizontal {
+    height: 16px;
+    width: 56px;
+    left: 5px;
+}

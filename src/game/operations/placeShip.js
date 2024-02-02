@@ -1,7 +1,6 @@
 import setShip from '../factories/setShip.js';
 
 export default function placeShip(gameboard, coordinates) {
-  console.log(coordinates);
   const start = coordinates[0];
   const end = coordinates[1];
   const cells = [];
@@ -25,7 +24,6 @@ export default function placeShip(gameboard, coordinates) {
   }
   const ship = setShip(axis.length);
   cells.forEach((cell) => {
-    console.log(cell);
     const place = gameboard[cell[0]][cell[1]];
     if ('ship' in place) return new Error('Ship in place');
     else gameboard[cell[0]][cell[1]].ship = ship;

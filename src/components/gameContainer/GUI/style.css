@@ -13,9 +13,9 @@
 
 #pst, #playerSection {
 	opacity: 0;
+	transition: opacity .5s ease-in-out;
 }
 
 #pst.show, #playerSection.show {
 	opacity: 1;
-	transition: opacity 1.5s ease-in-out;
 }

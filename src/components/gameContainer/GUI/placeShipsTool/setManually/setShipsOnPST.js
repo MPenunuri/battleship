@@ -3,7 +3,6 @@ import createHtmlElement from '../../../../../services/createHtmlElement.js';
 export default function setShipsOnPST() {
   const rows = document.querySelectorAll('.pstRow');
   // The ships' length was set up in the CSS file
-  // See .pst div:nth-child(n) div:nth-child(n) expressions
   const classes = ['pstShip', 'vertical', 'rotate'];
   createHtmlElement(rows[0], 'div', classes, '', 'pShip6', [
     { attribute: 'draggable', value: 'true' },
