@@ -1,7 +1,11 @@
 import './style.css';
 import setForm from './components/form/setForm.js';
+import setGraphicalShips from './components/graphicalShips/setGraphicalShips.js';
 
 const playBtn = document.getElementById('playBtn');
+
+// Ships for visual purposes
+setGraphicalShips();
 
 // setTimeout is used to display DOM animations
 playBtn.addEventListener('click', () => {

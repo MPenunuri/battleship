@@ -1,0 +1,223 @@
+#graphicalShips {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(5, 251, 255);
+}
+
+.shipContainer {
+    position: relative;
+    height: 20vh;
+    width: 100vw;
+    padding: 0;
+    animation: moveWaves 4s ease infinite;
+    animation-fill-mode: forwards;
+}
+
+.backgroundRow {
+    height: 5.55vh;
+    width: 100%;
+    background-size: 5.55vh;
+    background-repeat: repeat;
+    background-color: aqua;
+    box-shadow: 2px 2px 60px 2px rgb(0, 224, 253);
+    animation-fill-mode: forwards;
+    z-index: -2;
+}
+
+.backgroundRow1{
+    animation: moveWaves1 4s ease infinite;
+}
+
+.backgroundRow2 {
+    animation: moveWaves2 4s ease infinite;
+    transform: translate(5px, 5px);
+    z-index: -1;
+}
+
+.backgroundRow3 {
+    animation: moveWaves3 4s ease infinite;
+    transform: translate(-5px, -5px)
+}
+
+@keyframes moveWaves1 {
+    0% {
+        transform: translate(0px, 0px);
+        }
+    25% {
+        transform: translate(5px, 5px);
+    }
+    50% {
+        transform: translate(10px, 10px);
+    }
+    75% {
+        transform: translate(5px, 5px);
+    }
+
+    95% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes moveWaves2 {
+    0% {
+        transform: translate(5px, 5px);
+    }
+
+    25% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(-5px, -5px);
+    }
+
+    75% {
+        transform: translate(0px, 0px);
+    }
+    
+    95% {
+        transform: translate(5px, 5px);
+    }
+}
+
+@keyframes moveWaves3 {
+0% {
+        transform: translate(-5px, -5px);
+    }
+
+    25% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(5px, 5px);
+    }
+
+    75% {
+        transform: translate(0px, 0px);
+    }
+
+    95% {
+        transform: translate(-5px, -5px);
+    }
+}
+
+.graphicalShip {
+    position: absolute;
+    background-color: gray;
+    border-radius: 5px 5px 40px 40px;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    width: 12vh;
+    height: 3vh;
+}
+
+.leftSail {
+    position: absolute;
+    border-left: 4vh solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 8vh solid gray;
+    width: 0vw;
+    height: 0vh;
+    top: -8.5vh;
+    left: 2vh;
+    transform: rotate(0deg);
+}
+
+.rightSail {
+    position: absolute;
+    border-left: 0vh solid transparent;
+    border-right: 6vh solid transparent;
+    border-bottom: 10vh solid gray;
+    width: 0;
+    height: 0;
+    top: -10.5vh;
+    left: 6.4vh;
+}
+
+#graphicalShip1 {
+    animation: moveShip 12s ease infinite;
+}
+
+#graphicalShip2 {
+    animation: moveShip 8s ease infinite;
+}
+
+#graphicalShip3 {
+    animation: moveShip 10s ease infinite;
+}
+
+#graphicalShip4 {
+    animation: moveShip 6s ease infinite;
+}
+
+#graphicalShip5 {
+    animation: moveShip 14s ease infinite;
+}
+
+#graphicalShip6 {
+    animation: moveShip 9s ease infinite;
+}
+
+@keyframes moveShip {
+    0% {
+        opacity: 0;
+        transform: translate(-50vw, 0) rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(-40vw, 0) rotate(-25deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(-30vw, 0) rotate(0deg);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translate(-20vw, 0) rotate(25deg);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(-10vw, 0) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0vw, 0) rotate(-25deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate(10vw, 0) rotate(0deg);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(20vw, 0) rotate(25deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(30vw, 0) rotate(0deg);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate(40vw, 0) rotate(-25deg);
+    }
+
+    100% {
+        transform: translate(50vw, 0) rotate(0deg);
+        opacity: 0;
+    }
+}

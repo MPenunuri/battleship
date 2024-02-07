@@ -1,4 +1,5 @@
 form {
+	margin-top: 5vh;
 	gap: 1.5rem;
 	opacity: 0;
 	transition: opacity .5s ease-in-out;
@@ -12,11 +13,20 @@ label, input {
 	font-size: 3vh;
 }
 
+label {
+	border-radius: 40px;
+	padding: 10px;
+	background-color: white;
+	border: 2px solid black;
+	box-shadow: 2px 2px 10px 2px black;
+}
+
 input {
 	border-radius: 40px;
 	padding: 20px;
 	text-align: center;
-	border-color: black
+	border-color: black;
+	box-shadow: 2px 2px 10px 2px black;
 }
 
 input:focus {

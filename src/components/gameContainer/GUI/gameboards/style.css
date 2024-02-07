@@ -1,6 +1,8 @@
 #playerGameboard, #AIGameboard {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
+	background-color: white;
+	box-shadow: 2px 2px 10px 2px black;
 }
 
 .pgbc, .mgbc {
@@ -11,7 +13,7 @@
 }
 
 .pgbc:hover, .mgbc:hover {
-	background-color: black;
+	cursor: pointer;
 }
 
 .attacked {

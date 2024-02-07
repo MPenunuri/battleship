@@ -3,7 +3,7 @@ import arrow from '../../../../../../assets/arrow.svg';
 
 export default function addElements(pst) {
   // Create user advice
-  const legend = 'For a better experience, please take ships by the center.';
+  const legend = 'Place your ships!';
   createHtmlElement(pst, 'p', [], legend, 'legend');
   // Create change ships direction button
   createHtmlElement(pst, 'button', [], 'Change direction', 'directionBtn', [

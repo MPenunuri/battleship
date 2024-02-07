@@ -34,6 +34,10 @@ export default function setMachineGameboard() {
       const legend = "You're a winner!";
       status === true ? end(legend) : machineAttack();
     };
-    cell.addEventListener('click', attackFn);
+    cell.addEventListener('click', () => {
+      const activePlayer = play.current.game.player1.active;
+      activePlayer ? attackFn() : () => {};
+      play.current.game.player1.active = false;
+    });
   });
 }

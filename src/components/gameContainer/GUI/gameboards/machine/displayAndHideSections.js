@@ -8,6 +8,7 @@ export default function displayAndHideSections() {
     basicOrientation.textContent = 'Now is machine turn.';
     const animationText = document.getElementById('animationText');
     animationText.textContent = 'Watch out!';
+    animationText.style.color = 'brown';
     const playerSection = document.getElementById('playerSection');
     playerSection.style.display = 'flex';
     const AISection = document.getElementById('AISection');

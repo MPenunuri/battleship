@@ -39,6 +39,10 @@ input, button {
 	font-family: 'Montserrat', sans-serif;
 }
 
+#playBtn {
+	margin-top: 25vh;;
+}
+
 button {
 	background-color: black;
 	color: white;
@@ -47,6 +51,7 @@ button {
 	box-shadow: 4px 4px 10px black;
 	padding: 1rem;
 	font-size: 5vh;
+	z-index: 2;
 }
 
 button:hover {
@@ -66,13 +71,21 @@ button:focus {
 }
 
 header {
-	margin-top: 10vh;
-	margin-bottom: 10vh;
+	margin-top: 2vh;
 	font-size: min(15vw, 80px);
+	z-index: 1;
 }
 
 footer {
 	position:fixed;
 	bottom: 2vh;
 	font-size: 2vh;
+}
+
+header, footer{
+	border-radius: 60px;
+	background-color: white;
+	padding: 15px;
+	border: 2px solid black;
+	box-shadow: 6px 6px 20px black;
 }

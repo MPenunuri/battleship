@@ -25,7 +25,6 @@ export default function machine(gameboard) {
       return attackRandomly(playerGameboard);
     } else {
       receiveAttack(playerGameboard, target);
-      console.log(target);
       return target;
     }
   };

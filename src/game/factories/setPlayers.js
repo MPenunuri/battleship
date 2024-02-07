@@ -12,7 +12,6 @@ export default function setPlayers() {
       name: undefined,
       gameboard: setGameboard(),
       wins: 0,
-      active: false,
     },
   };
 }

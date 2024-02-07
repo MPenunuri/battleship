@@ -1,11 +1,16 @@
 import createHtmlElement from '../../../../services/createHtmlElement.js';
 import setConfirmationBtn from './setConfirmationBtn.js';
 import setTryAgainBtn from './setTryAgainBtn.js';
+import createPST from './createPST.js';
 
 export default function setFinalButtons(newLegend, confirmationFn, tryAgainFn) {
-  const pst = document.getElementById('pst');
+  const pst = (() => {
+    return document.querySelectorAll('#pst').length === 0
+      ? createPST()
+      : document.getElementById('pst');
+  })();
   // Hide temporary pst container
-  pst.classList.remove('show');
+  if (pst.classList.contains('show')) pst.classList.remove('show');
   setTimeout(() => {
     // Remove unnecesary elements from previous step
     while (pst.firstChild) {
@@ -21,5 +26,5 @@ export default function setFinalButtons(newLegend, confirmationFn, tryAgainFn) {
   // Show pst container
   setTimeout(() => {
     pst.classList.add('show');
-  }, 500);
+  }, 1000);
 }

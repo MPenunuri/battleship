@@ -5,13 +5,12 @@ import shuffle from '../../../../assets/shuffle-outline.svg';
 import hand from '../../../../assets/hand-right-outline.svg';
 import setRandomly from './placeShipsTool/setRandomly.js';
 import setManually from './placeShipsTool/setManually.js';
+import createPST from './placeShipsTool/createPST.js';
 
 export default function setPlaceShipsTool() {
-  const generalContainer = document.getElementById('generalContainer');
   // Create pst container
   // pst stands for place-ships tool
-  createHtmlElement(generalContainer, 'div', [], '', 'pst');
-  const pst = document.getElementById('pst');
+  const pst = createPST();
   // Create user advice
   const playerName = play.current.game.player1.name;
   const legend = `Hi ${playerName}! Please select how you want to place your navy:`;

@@ -8,14 +8,21 @@
 	transition: 1s ease-in-out;
 }
 
-#generalContainer.hide {
+#generalContainer.hide, header.hide {
 	opacity: 0;
 	transition: 1s ease-in-out;
 }
 
 #pst, #panel {
 	gap: 10px;
-	height: 200px;
+	height: 160px;
+	margin-top: 4vh;
+	margin-bottom: 2vh;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: white;
+	border: 2px solid black;
+	box-shadow: 2px 2px 10px 2px black;
 }
 
 #pst, #playerSection, #AIGameboard, #panel {
@@ -30,6 +37,6 @@
 #panel > p:nth-child(2) {
 	font-size: 45px;
 	font-weight: 900;
-	color: brown;
+	color: green;
 	text-decoration: underline;
 }
