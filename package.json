@@ -55,5 +55,8 @@
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     }
+  },
+  "dependencies": {
+    "battleship": "file:"
   }
 }

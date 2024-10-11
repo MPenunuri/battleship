@@ -7,7 +7,7 @@ import setGame from '../../game/setGame.js';
 export default function () {
   const generalContainer = document.getElementById('generalContainer');
   generalContainer.classList.add('hide');
-  let playerName = play.current.game.player.name;
+  let playerName = play.current.game.player1.name;
   play.current = setGame();
   play.current.setPlayerName(1, playerName);
   play.current.setPlayerName(2, 'Machine');
@@ -22,6 +22,7 @@ export default function () {
     setPlayerGameboard();
     isMovile === false ? setPlaceShipsTool() : setRandomly();
     setTimeout(() => {
+      generalContainer.classList.remove('hide');
       const playerSection = document.getElementById('playerSection');
       const pst = document.getElementById('pst'); // pst stands for place ships tool
       playerSection.classList.add('show');

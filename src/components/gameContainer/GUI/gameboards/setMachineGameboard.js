@@ -29,15 +29,30 @@ export default function setMachineGameboard() {
       if (activePlayer) {
         const coordinates = getCoordinatesFromId(cell.id);
         const attack = receiveAttack(gameboard, coordinates);
-        if (attack === true) cell.classList.add('attacked');
-        else cell.classList.add('missed');
+        if (attack === true) {
+          cell.classList.add('attacked');
+          if (isSunk(gameboard, coordinates)) {
+            cell.classList.add('sunked');
+          }
+        } else {
+          cell.classList.add('missed');
+        }
         cell.removeEventListener('click', attackFn);
-        const status = play.current.allShipsSunk(gameboard);
-        const legend = "You're a winner!";
-        status === true ? end(legend) : machineAttack();
       }
       play.current.game.player1.active = false;
+      const status = play.current.allShipsSunk(gameboard);
+      const legend = "You're a winner!";
+      status === true ? end(legend) : machineAttack();
     };
     cell.addEventListener('click', attackFn);
   });
+}
+
+function isSunk(gameboard, coordinates) {
+  const place = gameboard[coordinates[0]][coordinates[1]];
+  if (place.attacked) {
+    if ('ship' in place && place.ship.isSunk()) {
+      return true;
+    } else return false;
+  }
 }
